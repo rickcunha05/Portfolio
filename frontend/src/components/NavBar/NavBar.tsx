@@ -1,8 +1,10 @@
-import React from 'react'
-import './NavBar.scss'
+import React from "react";
+import "./NavBar.scss";
 
 export default function NavBar() {
   return (
-    <div>NavBar</div>
-  )
+    <nav>
+      <div>fon</div>
+    </nav>
+  );
 }
