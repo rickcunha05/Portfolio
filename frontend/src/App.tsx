@@ -1,10 +1,10 @@
-
+import {About, Footer, Header, Skills, Testimonial, Work} from './container'
 
 function App() {
 
   return (
     <>
-    <h1>Hello Marcio!</h1>
+    <h1>Hello Edoardaa!</h1>
     </>
   )
 }
