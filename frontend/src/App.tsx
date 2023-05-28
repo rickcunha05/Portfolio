@@ -6,12 +6,12 @@ function App() {
   return (
     <div className="app">
       <NavBar />
-      <About />
-      <Footer />
       <Header />
+      <About />
+      <Work />
       <Skills />
       <Testimonial />
-      <Work />
+      <Footer />
     </div>
   );
 }
