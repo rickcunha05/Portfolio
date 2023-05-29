@@ -1,14 +1,9 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { About } from "../../@types/About";
 
 import "./About.scss";
 import { urlFor, client } from "../../client";
-
-interface About {
-  title: string;
-  imgUrl: string;
-  description: string;
-}
 
 export default function About() {
   const [abouts, setAbouts] = useState<About[]>([]);
