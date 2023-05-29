@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { About } from "../../@types/About";
 
 import "./About.scss";
-import { urlFor, client } from "../../client";
+import { urlFor, client } from "../../services/client";
 
 export default function About() {
   const [abouts, setAbouts] = useState<About[]>([]);
