@@ -4,8 +4,9 @@ import { About } from "../../@types/About";
 
 import "./About.scss";
 import { urlFor, client } from "../../services/client";
+import { AppWrap } from "../../wrapper";
 
-export default function About() {
+function About() {
   const [abouts, setAbouts] = useState<About[]>([]);
 
   useEffect(() => {
@@ -47,3 +48,5 @@ export default function About() {
     </>
   );
 }
+
+export default AppWrap(About, "about");
