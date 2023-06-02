@@ -61,7 +61,7 @@ function Work() {
         className="app__work-portfolio"
       >
         {filterWork.length === 0 ? (
-          <h1>Nenhum trabalho encontrado.</h1>
+          <h1>Under Construction.</h1>
         ) : (
           filterWork.map((work, index) => (
             <div className="app__work-item app__flex" key={index}>
