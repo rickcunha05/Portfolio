@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Tooltip } from "react-tooltip";
 import { urlFor, client } from "../../services/client";
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { Experiences } from "../../@types/Experiences";
 import { Skills } from "../../@types/Skills";
 
@@ -86,4 +86,8 @@ function Skills() {
     </>
   );
 }
-export default AppWrap(Skills, "skills");
+export default AppWrap(
+  MotionWrap(Skills, "app__skills"),
+  "skills",
+  "app__whitebg"
+);
