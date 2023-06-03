@@ -1,53 +1,28 @@
-import React, { useState, useEffect } from "react";
+import { useWork } from "../../hooks/containers/useWork";
+
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
-import { urlFor, client } from "../../services/client";
-import "./Work.scss";
+import { urlFor } from "../../services/client";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { Works } from "../../@types/Works";
+
+import "./Work.scss";
 
 function Work() {
-  const [activeFilter, setActiveFilter] = useState("All");
-  const [filterWork, setFilterWork] = useState<Works[]>([]);
-  const [works, setWorks] = useState<Works[]>([]);
-  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-
-  useEffect(() => {
-    const query = '*[_type == "works"]';
-
-    client.fetch(query).then((data: Works[]) => {
-      setWorks(data);
-      setFilterWork(data);
-    });
-  }, []);
-  const handleWorkFilter = (item: any) => {
-    setActiveFilter(item);
-    setAnimateCard({ y: 100, opacity: 0 });
-
-    setTimeout(() => {
-      setAnimateCard({ y: 0, opacity: 1 });
-
-      if (item === "All") {
-        setFilterWork(works);
-      } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
-      }
-    }, 500);
-  };
+  const { uesWork } = useWork();
   return (
     <>
       <h2 className="head-text">
         My Creative <span>Portfolio</span> Section
       </h2>
       <div className="app__work-filter">
-        {["Web App", "Mobile App", "React JS", "Node JS", "All"].map(
+        {["Fullstack", "Frontend", "Microservices", "All"].map(
           (item, index) => (
             <div
               key={index}
-              onClick={() => handleWorkFilter(item)}
+              onClick={() => uesWork.handleWorkFilter(item)}
               className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
+                uesWork.activeFilter === item ? "item-active" : ""
               }`}
             >
               {item}
@@ -56,14 +31,14 @@ function Work() {
         )}
       </div>
       <motion.div
-        animate={animateCard}
+        animate={uesWork.animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {filterWork.length === 0 ? (
+        {uesWork.filterWork.length === 0 ? (
           <h1>Under Construction.</h1>
         ) : (
-          filterWork.map((work, index) => (
+          uesWork.filterWork.map((work, index) => (
             <div className="app__work-item app__flex" key={index}>
               <div className="app__work-img app__flex">
                 <img src={urlFor(work.imgUrl).url()} alt={work.name} />
