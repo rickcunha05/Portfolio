@@ -9,7 +9,7 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Work.scss";
 
 function Work() {
-  const { uesWork } = useWork();
+  const { setUseWork } = useWork();
   return (
     <>
       <h2 className="head-text">
@@ -20,9 +20,9 @@ function Work() {
           (item, index) => (
             <div
               key={index}
-              onClick={() => uesWork.handleWorkFilter(item)}
+              onClick={() => setUseWork.handleWorkFilter(item)}
               className={`app__work-filter-item app__flex p-text ${
-                uesWork.activeFilter === item ? "item-active" : ""
+                setUseWork.activeFilter === item ? "item-active" : ""
               }`}
             >
               {item}
@@ -31,14 +31,14 @@ function Work() {
         )}
       </div>
       <motion.div
-        animate={uesWork.animateCard}
+        animate={setUseWork.animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {uesWork.filterWork.length === 0 ? (
+        {setUseWork.filterWork.length === 0 ? (
           <h1>Under Construction.</h1>
         ) : (
-          uesWork.filterWork.map((work, index) => (
+          setUseWork.filterWork.map((work, index) => (
             <div className="app__work-item app__flex" key={index}>
               <div className="app__work-img app__flex">
                 <img src={urlFor(work.imgUrl).url()} alt={work.name} />

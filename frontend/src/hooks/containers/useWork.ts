@@ -31,7 +31,7 @@ export function useWork() {
       }
     }, 500);
   };
-  const uesWork = {
+  const setUseWork = {
     works,
     setWorks,
     filterWork,
@@ -42,5 +42,5 @@ export function useWork() {
     setAnimateCard,
     handleWorkFilter,
   };
-  return { uesWork };
+  return { setUseWork };
 }

@@ -1,21 +1,12 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { About } from "../../@types/About";
+import { useAbout } from "../../hooks/containers/useAbout";
 
 import "./About.scss";
-import { urlFor, client } from "../../services/client";
+import { urlFor } from "../../services/client";
 import { AppWrap, MotionWrap } from "../../wrapper";
 
 function About() {
-  const [abouts, setAbouts] = useState<About[]>([]);
-
-  useEffect(() => {
-    const query = '*[_type == "abouts"]';
-
-    client.fetch(query).then((data: About[]) => {
-      setAbouts(data);
-    });
-  }, []);
+  const { setUseAbout } = useAbout();
 
   return (
     <>
@@ -27,7 +18,7 @@ function About() {
         <span>Good Business</span>
       </h2>
       <div className="app__profiles">
-        {abouts.map((about, index) => (
+        {setUseAbout.abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
