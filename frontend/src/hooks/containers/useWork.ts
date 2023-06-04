@@ -10,12 +10,20 @@ export function useWork() {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    const query = '*[_type == "works"]';
+    const query = '*[_type == "works" &&  published == true][0...100]';
 
-    client.fetch(query).then((data: Works[]) => {
-      setWorks(data);
-      setFilterWork(data);
-    });
+    const fetchWorks = () => {
+      client
+        .fetch(query)
+        .then((data: Works[]) => {
+          setWorks(data);
+          setFilterWork(data);
+        })
+        .catch((error) => {
+          console.error("Error fetching works:", error);
+        });
+    };
+    return fetchWorks;
   }, []);
   const handleWorkFilter = (item: string) => {
     setActiveFilter(item);

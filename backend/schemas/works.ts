@@ -45,5 +45,11 @@ export default {
         },
       ],
     },
+    {
+      name: 'published',
+      title: 'Published',
+      type: 'boolean',
+      initialValue: true,
+    },
   ],
 }
