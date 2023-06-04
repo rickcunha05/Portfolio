@@ -15,4 +15,16 @@ export default {
       of: [{type: 'workExperience'}],
     },
   ],
+  orderings: [
+    {
+      title: 'Year, New',
+      name: 'yearDesc',
+      by: [{field: 'year', direction: 'desc'}],
+    },
+    {
+      title: 'Year, Old',
+      name: 'yearAsc',
+      by: [{field: 'year', direction: 'asc'}],
+    },
+  ],
 }
