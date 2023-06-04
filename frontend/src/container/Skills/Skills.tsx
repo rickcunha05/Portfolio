@@ -1,34 +1,20 @@
-import { useState, useEffect } from "react";
+import { useSkills } from "../../hooks/containers/useSkills";
+
 import { motion } from "framer-motion";
 import { Tooltip } from "react-tooltip";
-import { urlFor, client } from "../../services/client";
+import { urlFor } from "../../services/client";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { Experiences } from "../../@types/Experiences";
-import { Skills } from "../../@types/Skills";
 
 import "./Skills.scss";
 
 function Skills() {
-  const [experiences, setExperience] = useState<Experiences[]>([]);
-  const [skills, setSkills] = useState<Skills[]>([]);
-
-  useEffect(() => {
-    const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
-
-    client.fetch(query).then((data: Experiences[]) => {
-      setExperience(data);
-    });
-    client.fetch(skillsQuery).then((data: Skills[]) => {
-      setSkills(data);
-    });
-  }, []);
+  const { setUseSkills } = useSkills();
   return (
     <>
       <h2 className="head-text">Skills & Experience</h2>
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
-          {skills.map((skill, index) => (
+          {setUseSkills.skills.map((skill, index) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
@@ -46,7 +32,7 @@ function Skills() {
           ))}
         </motion.div>
         <div className="app__skills-exp">
-          {experiences.map((experience, index) => (
+          {setUseSkills.experiences.map((experience, index) => (
             <motion.div
               className="app__skills-exp-item"
               key={experience.year + index}
