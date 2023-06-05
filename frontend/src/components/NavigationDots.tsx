@@ -1,5 +1,5 @@
 interface NavigationDotsProps {
-  active: string;
+  active: any;
 }
 
 const NavigationDots: React.FC<NavigationDotsProps> = ({ active }) => (
