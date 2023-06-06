@@ -37,7 +37,7 @@ function Footer() {
   };
   return (
     <>
-      <h2 className="head-text"> Take A coffe & Chat Witch Me</h2>
+      <h2 className="head-text"> Take A coffe & Chat with Me</h2>
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
@@ -97,9 +97,7 @@ function Footer() {
         </div>
       ) : (
         <div>
-          <h3 className="head-text">
-            Thank you getting in touch! May JUNBA! be with you
-          </h3>
+          <h3 className="head-text">Thank you getting in touch!</h3>
         </div>
       )}
     </>
