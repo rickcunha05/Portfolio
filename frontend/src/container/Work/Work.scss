@@ -154,3 +154,9 @@
     top: -25px;
   }
 }
+.app__link-title {
+  text-decoration: none;
+}
+.app__link-title:hover {
+  text-decoration: underline overline var(--secondary-color);
+}
