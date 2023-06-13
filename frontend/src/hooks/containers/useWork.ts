@@ -12,18 +12,15 @@ export function useWork() {
   useEffect(() => {
     const query = '*[_type == "works" &&  published == true][0...100]';
 
-    const fetchWorks = () => {
-      client
-        .fetch(query)
-        .then((data: Works[]) => {
-          setWorks(data);
-          setFilterWork(data);
-        })
-        .catch((error) => {
-          console.error("Error fetching works:", error);
-        });
-    };
-    return fetchWorks;
+    client
+      .fetch(query)
+      .then((data: Works[]) => {
+        setWorks(data);
+        setFilterWork(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching works:", error);
+      });
   }, []);
   const handleWorkFilter = (item: string) => {
     setActiveFilter(item);
