@@ -16,7 +16,7 @@ function Work() {
         My Creative <span>Portfolio</span> Section
       </h2>
       <div className="app__work-filter">
-        {["Fullstack", "Frontend", "Microservices", "All"].map(
+        {["All", "Fullstack", "Frontend", "Microservices"].map(
           (item, index) => (
             <div
               key={index}
@@ -74,7 +74,14 @@ function Work() {
                 </motion.div>
               </div>
               <div className="app__work-content app__flex">
-                <h4 className="bold-text">{work.title}</h4>
+                <a
+                  href={work.projectLink}
+                  target="_blanc"
+                  rel="noreferrer"
+                  className="app__link-title"
+                >
+                  <h4 className="bold-text p-text">{work.title}</h4>
+                </a>
                 <p className="p-text" style={{ marginTop: 10 }}>
                   {work.description}
                 </p>
