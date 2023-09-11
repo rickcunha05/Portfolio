@@ -1,4 +1,4 @@
-import { BsInstagram, BsGithub, BsFileEarmarkPdfFill } from "react-icons/bs";
+import { BsGithub, BsFileEarmarkPdfFill } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 export default function SocialMedia() {
   const urlLinkedin = "https://www.linkedin.com/in/henrique-cunha-b767a7191/"; 
