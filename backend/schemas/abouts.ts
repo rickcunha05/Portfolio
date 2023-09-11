@@ -21,5 +21,11 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: 'published',
+      title: 'Published',
+      type: 'boolean',
+      initialValue: true,
+    },
   ],
 }
