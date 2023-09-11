@@ -1,8 +1,7 @@
 import { BsInstagram, BsGithub, BsFileEarmarkPdfFill } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 export default function SocialMedia() {
-  const urlLinkedin = "https://www.linkedin.com/in/henrique-cunha-b767a7191/";
-  const urInstagram = "https://www.instagram.com/rickcunha05/";
+  const urlLinkedin = "https://www.linkedin.com/in/henrique-cunha-b767a7191/"; 
   const urlGithub = "https://github.com/rickcunha05";
   const curriculo = "/src/assets/Henrique Cunha (1).pdf";
   return (
@@ -11,12 +10,7 @@ export default function SocialMedia() {
         <a href={urlLinkedin} target="_blank" rel="noopener noreferrer">
           <FaLinkedinIn />
         </a>
-      </div>
-      <div>
-        <a href={urInstagram} target="_blank" rel="noopener noreferrer">
-          <BsInstagram />
-        </a>
-      </div>
+      </div>    
       <div>
         <a href={urlGithub} target="_blank" rel="noopener noreferrer">
           <BsGithub />

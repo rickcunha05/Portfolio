@@ -16,7 +16,7 @@ function Work() {
         My Creative <span>Portfolio</span> Section
       </h2>
       <div className="app__work-filter">
-        {["All", "Fullstack", "Frontend", "Microservices"].map(
+        {["All", "Frontend", "Backend", "Mobile Apps"].map(
           (item, index) => (
             <div
               key={index}

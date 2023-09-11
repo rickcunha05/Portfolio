@@ -16,8 +16,8 @@ const AppWrap = (
           {Component && <Component />}
 
           <div className="copyright">
-            <p className="p-text">@2020 MICHAEL</p>
-            <p className="p-text">All rights reserved</p>
+            <p className="p-text"> © 2020 Henrique Cunha</p>
+            <p className="p-text">Todos os Direitos Reservados</p>
           </div>
         </div>
         <NavigationDots active={idName} />
