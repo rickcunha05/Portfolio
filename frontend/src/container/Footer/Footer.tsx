@@ -37,7 +37,7 @@ function Footer() {
   };
   return (
     <>
-      <h2 className="head-text"> Take A coffe & Chat with Me</h2>
+      <h2 className="head-text"> Tome um Café & Converse Comigo</h2>
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
@@ -92,12 +92,12 @@ function Footer() {
             />
           </div>
           <button type="button" className="p-text" onClick={handleSubmit}>
-            {loading ? "sending" : " Send Message..."}
+            {loading ? "enviando" : " Enviar Mensagem..."}
           </button>
         </div>
       ) : (
         <div>
-          <h3 className="head-text">Thank you getting in touch!</h3>
+          <h3 className="head-text">Obrigado por entrar em contato!</h3>
         </div>
       )}
     </>

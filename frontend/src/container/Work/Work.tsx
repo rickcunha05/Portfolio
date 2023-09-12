@@ -13,7 +13,7 @@ function Work() {
   return (
     <>
       <h2 className="head-text">
-        My Creative <span>Portfolio</span> Section
+        Minha seção de  <span>Portfólio </span> criativo
       </h2>
       <div className="app__work-filter">
         {["All", "Frontend", "Backend", "Mobile Apps"].map(
@@ -36,7 +36,7 @@ function Work() {
         className="app__work-portfolio"
       >
         {setUseWork.filterWork.length === 0 ? (
-          <h1>Under Construction.</h1>
+          <h1>Ainda estamos construindo esse espaço.</h1>
         ) : (
           setUseWork.filterWork.map((work, index) => (
             <div className="app__work-item app__flex" key={index}>

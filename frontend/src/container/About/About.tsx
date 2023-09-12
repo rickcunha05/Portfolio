@@ -11,11 +11,11 @@ function About() {
   return (
     <>
       <h2 className="head-text">
-        I know that
-        <span>Good Development</span>
+        UM BOM 
+        <span> NEGÓCIO </span>
         <br />
-        means
-        <span>Good Business</span>
+        COMEÇA COM UM <br/>
+        <span> BOM DESENVOLVEDOR </span>
       </h2>
       <div className="app__profiles">
         {setUseAbout.abouts.map((about, index) => (

@@ -27,14 +27,14 @@ function Header() {
           <div className="badge-cmp app__flex">
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I am</p>
+              <p className="p-text">Olá, eu sou o</p>
               <h1 className="head-text">Henrique</h1>
             </div>
           </div>
 
           <div className="tag-cmp app__flex">
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">Javascript Specialist</p>
+            <p className="p-text">Engenheiro de Software</p>
+            <p className="p-text">Especialista Javascript</p>
           </div>
         </div>
       </motion.div>

@@ -11,7 +11,7 @@ function Skills() {
   const { setUseSkills } = useSkills();
   return (
     <>
-      <h2 className="head-text">Skills & Experience</h2>
+      <h2 className="head-text">Skills & Experiências</h2>
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
           {setUseSkills.skills.map((skill, index) => (
