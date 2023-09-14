@@ -3,7 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 export default function SocialMedia() {
   const urlLinkedin = "https://www.linkedin.com/in/henrique-cunha-b767a7191/"; 
   const urlGithub = "https://github.com/rickcunha05";
-  const curriculo = "/src/assets/Henrique Cunha (1).pdf";
+  const curriculo = "https://drive.google.com/u/0/uc?id=1USi71ppfcgjioRQ9jpv3INKxe4EZONIv&export=download";
   return (
     <div className="app__social">
       <div>
@@ -18,8 +18,7 @@ export default function SocialMedia() {
       </div>
       <div>
         <a
-          href={curriculo}
-          target="_blank"
+          href={curriculo}          
           rel="noopener noreferrer"
           download="Henrique Cunha"
         >
