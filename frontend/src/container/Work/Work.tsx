@@ -16,7 +16,7 @@ function Work() {
         Minha seção de  <span>Portfólio </span> criativo
       </h2>
       <div className="app__work-filter">
-        {["All", "Frontend", "Backend", "Mobile Apps"].map(
+        {["All","Frontend", "Backend", "Mobile Apps"].map(
           (item, index) => (
             <div
               key={index}
@@ -99,6 +99,6 @@ function Work() {
 
 export default AppWrap(
   MotionWrap(Work, "app__works"),
-  "work",
+  "projetos",
   "app__primarybg"
 );

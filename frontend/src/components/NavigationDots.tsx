@@ -4,7 +4,7 @@ interface NavigationDotsProps {
 
 const NavigationDots: React.FC<NavigationDotsProps> = ({ active }) => (
   <div className="app__navigation">
-    {["home", "about", "work", "skills", "contact"].map((item, index) => (
+    {["home", "sobre", "trabalhos", "skills", "contato"].map((item, index) => (
       <a
         href={`#${item}`}
         key={item + index}
