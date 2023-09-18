@@ -1,5 +1,5 @@
 import "./ProcessCard.scss"
-export default function Card() {
+export default function ProcessCard() {
   return (
     <>
       <div className="process-card">

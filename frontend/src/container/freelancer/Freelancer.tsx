@@ -1,4 +1,4 @@
-import Card from "../../components/processCard/ProcessCard";
+import ProcessCard from "../../components/processCard/ProcessCard";
 import ServiceCard from "../../components/serviceCard/ServiceCard";
 import { AppWrap, MotionWrap } from "../../wrapper";
 
@@ -32,7 +32,7 @@ function Freelancer() {
     listItem02="Web services para aplicações robustas e alto desempenho;" 
     listItem03="Micro services para auxiliar e descentralizar grandes cargas da aplicação;"
   />    
-  </div>
+  </div>  
 </>
  )
 }
