@@ -1,4 +1,3 @@
-import ProcessCard from "../../components/processCard/ProcessCard";
 import ServiceCard from "../../components/serviceCard/ServiceCard";
 import { AppWrap, MotionWrap } from "../../wrapper";
 
