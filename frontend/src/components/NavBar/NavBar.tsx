@@ -12,7 +12,7 @@ export default function NavBar() {
         {/* <img src={images.logo} alt="logo" /> */}
       </div>
       <ul className="app__navbar-links">       
-        {["home", "sobre","serviços","projetos", "skills", "contato"].map((item) => (
+        {["home", "sobre","projetos", "skills", "contato"].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>

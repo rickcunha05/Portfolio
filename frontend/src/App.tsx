@@ -2,7 +2,6 @@ import { About, Footer, Header, Skills, Work } from "./container";
 import { NavBar } from "./components";
 import "./App.scss";
 import "./services/i18n";
-import Freelancer from "./container/freelancer/Freelancer";
 
 function App() {
   // const {i18n:{changeLanguage, language}} = useTranslation();
@@ -21,7 +20,7 @@ function App() {
       <NavBar />
       <Header />
       <About />
-      <Freelancer />
+      {/* <Freelancer /> */}
       <Work />
       <Skills />      
       {/* <Testimonial /> */}
