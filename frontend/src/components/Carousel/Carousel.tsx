@@ -5,7 +5,7 @@ function Carousel() {
   const [cards] = useState([
     {
       title: 'Card 1',
-      description: 'Descrição do Card 1',
+      description: 'Descrição do Card 0',
       imageUrl: 'image1.jpg',
     },
     {
